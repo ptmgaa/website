@@ -1,0 +1,32 @@
+/* Shake animation */
+@keyframes shake {
+  10%, 90% {
+    transform: translateX(-2px);
+  }
+  20%, 80% {
+    transform: translateX(2px);
+  }
+  30%, 50%, 70% {
+    transform: translateX(-4px);
+  }
+  40%, 60% {
+    transform: translateX(4px);
+  }
+}
+.shake {
+  animation: shake 0.5s;
+}
+/* Simple confetti particles */
+.confetti-piece {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #F87171; /* red-400 */
+  opacity: 0.9;
+  border-radius: 1px;
+  animation: confetti-fall linear forwards;
+}
+@keyframes confetti-fall {
+  0% {transform: translateY(0) rotate(0deg);}
+  100% {transform: translateY(300px) rotate(360deg);}
+}
